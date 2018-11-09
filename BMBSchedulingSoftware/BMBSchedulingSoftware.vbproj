@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC8D519E-5C31-4E06-B7F7-91578B41B557}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>BMBSchedulingSoftware.My.MyApplication</StartupObject>
+    <RootNamespace>BMBSchedulingSoftware</RootNamespace>
+    <AssemblyName>BMBSchedulingSoftware</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>BMBSchedulingSoftware.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>BMBSchedulingSoftware.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Solver.Foundation, Version=3.0.2.10889, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\Microsoft.Solver.Foundation\v4.0_3.0.2.10889__31bf3856ad364e35\Microsoft.Solver.Foundation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BMB_DataDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BMB_DataDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database.vb" />
+    <Compile Include="frmDemand.Designer.vb">
+      <DependentUpon>frmDemand.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDemand.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployees.Designer.vb">
+      <DependentUpon>frmEmployees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHelp.Designer.vb">
+      <DependentUpon>frmHelp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHelp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainNew.Designer.vb">
+      <DependentUpon>frmMainNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOptimization.Designer.vb">
+      <DependentUpon>frmOptimization.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOptimization.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRating.Designer.vb">
+      <DependentUpon>frmRating.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRating.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeam.Designer.vb">
+      <DependentUpon>frmTeam.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTeam.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWelcomeNew.Designer.vb">
+      <DependentUpon>frmWelcomeNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWelcomeNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Period.vb" />
+    <Compile Include="Employee.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Optimization.vb" />
+    <Compile Include="Shift.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmDemand.resx">
+      <DependentUpon>frmDemand.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployees.resx">
+      <DependentUpon>frmEmployees.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHelp.resx">
+      <DependentUpon>frmHelp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainNew.resx">
+      <DependentUpon>frmMainNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOptimization.resx">
+      <DependentUpon>frmOptimization.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRating.resx">
+      <DependentUpon>frmRating.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeam.resx">
+      <DependentUpon>frmTeam.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWelcomeNew.resx">
+      <DependentUpon>frmWelcomeNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BMB_DataDataSet.xsc">
+      <DependentUpon>BMB_DataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BMB_DataDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BMB_DataDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BMB_DataDataSet.xss">
+      <DependentUpon>BMB_DataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BMB_Data.accdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="User_Data.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
